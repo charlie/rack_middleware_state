@@ -18,6 +18,10 @@ require 'rack'
 # Rack app container in the current directory, then do something like:
 #
 #   curl -X POST -d 'ponies!' http://localhost:9292/
+#
+# * I guess there is some conceivable circumstance in which some middleware
+# ought to advance the filehandle past the beginning of the stream and then
+# leave it there, but I think I don't want to work on that app :-)
 
 class MiddleWareOne
 
